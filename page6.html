@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+	
+        body {
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+			background-image:url(https://image.adsoftheworld.com/p7h38biq0skx8oyorwuukkz70mw3);">
+        }
+        .login-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px; /* Adjust width as needed */
+            max-width: 90%;
+        }
+        .login-heading {
+            font-size: 24px;
+            font-weight: bold;
+            color: #343a40; /* Dark gray text */
+            margin-bottom: 20px;
+        }
+        .create-account {
+            font-size: 14px;
+            color: #6c757d; /* Gray text */
+            margin-bottom: 15px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-control {
+            border-radius: 5px;
+        }
+        .btn-login {
+            background-color: #fd7e14; /* Orange color */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .btn-login:hover {
+            background-color: #ff5200;
+        }
+        .terms-privacy {
+            font-size: 12px;
+            color: #6c757d;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .close-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            color: #ff5200;
+        }
+        .image-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .login-image {
+            width: 50px; /* Adjust size as needed */
+            height: auto;
+        }
+    </style>
+</head>
+<body >
+
+    <div class="conatiner-fluid" style="background-color:white;"> 
+	<div  class="conatiner"> 
+        <span class="close-button">&times;</span>
+        <div class="image-container">
+            <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/Image-login_btpq7r" alt="Food Image" class="login-image">
+            </div>
+        <h2 class="login-heading">Login</h2>
+        <p class="create-account">or create an account</p>
+        <hr class="mb-3">
+        <form>
+            <div class="form-group">
+                <label for="phoneNumber">Phone number</label>
+                <input type="tel" class="form-control" id="phoneNumber" placeholder="Enter your phone number">
+            </div>
+            <button type="submit" class="btn btn-login">LOGIN</button>
+            <p class="terms-privacy">By clicking on Login, I accept the Terms & Conditions & Privacy Policy</p>
+        </form>
+    </div>
+	</div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
