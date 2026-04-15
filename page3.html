@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiggy-like Food Delivery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="images/swiggy.jpeg" width="30" height="30" >
+      </svg>
+      <b style="color:#ff5200;">Swiggy</b>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fa-solid fa-location-arrow"></i>
+            
+            Setup your precise location
+          </a>
+        </li>
+        <li class="nav-item">
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search for restaurant and food" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.414-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+              </svg>
+            </button>
+          </form>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid bg-light py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card  text-white rounded-3 overflow-hidden">
+          <div class="row g-0">
+            <div class="col-md-12 position-relative">
+              <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/m/seo/DO_collectionBanner.png" class="card-img object-fit-cover" alt="Dining Table" style="height: 100%;">
+              
+              <div class="position-absolute bottom-0 start-0 p-4">
+                <h2 class="card-title">Explore Top Dining Out</h2>
+                <h2 class="card-title">Restaurants in Hyderabad</h2>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-md-12">
+        <div class="d-flex flex-wrap align-items-center">
+          <div class="dropdown me-2">
+            <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" id="filterDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              Filter
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="filterDropdown">
+              <li><a class="dropdown-item" href="#">Option 1</a></li>
+              <li><a class="dropdown-item" href="#">Option 2</a></li>
+              <li><a class="dropdown-item" href="#">Option 3</a></li>
+            </ul>
+          </div>
+          <div class="dropdown me-2">
+            <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" id="sortByDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              Sort By
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="sortByDropdown">
+              <li><a class="dropdown-item" href="#">Relevance</a></li>
+              <li><a class="dropdown-item" href="#">Rating</a></li>
+              <li><a class="dropdown-item" href="#">Price</a></li>
+            </ul>
+          </div>
+          <button class="btn btn-outline-secondary btn-sm me-2">Book a table</button>
+          <button class="btn btn-outline-secondary btn-sm me-2">Within 5km</button>
+          <button class="btn btn-outline-secondary btn-sm me-2">Rating 4+</button>
+          <button class="btn btn-outline-secondary btn-sm me-2">Pure Veg</button>
+          <button class="btn btn-outline-secondary btn-sm">Serves Alcohol</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+            <div class="col-md-4">
+                <div class="card restaurant-card">
+                    <img src="https://b.zmtcdn.com/data/pictures/5/19137785/2a7f83a38e37683caaa23e1bc3c441f3_featured_v2.jpg" class="card-img-top restaurant-image" alt="Masala Republic by Dadu's">
+                    <div class="card-body restaurant-info">
+                        <h5 class="card-title">Masala Republic by Dadu's <span class="rating">⭐ 3.9</span></h5>
+                        <p class="card-text">Continental • Chaat<br>Himayath Nagar, Hyderabad  4.3 km</p>
+                        <p class="card-text">₹1100 for two</p>
+                        <div class="mb-2">
+                            <button class="btn btn-outline-secondary btn-sm">Flat 20% off on walk-in</button> <button class="btn btn-outline-secondary btn-sm">+1 more</button>
+                        </div>
+                        <div class="mb-2">
+                            <span class="offer-badgbtn btn-outline-secondary btn-sm">Up to 10% off with bank offers</span>
+                        </div>
+                        <p class="card-text"><small class="text-muted">Get extra ₹100 off using PHONEPEUPI</small></p>
+                        <button class="btn btn-outline-secondary btn-sm">Table booking</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card restaurant-card">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/01/5b/9e/jewel-of-nizam.jpg?w=900&h=-1&s=1" class="card-img-top restaurant-image" alt="Jewel of Nizam - The Minar - Taj Krishna">
+                    <div class="card-body restaurant-info">
+                        <h5 class="card-title">Jewel of Nizam - The... <span class="rating">⭐ 4.1</span></h5>
+                        <p class="card-text">Hyderabadi • Mughlai<br>The Golkonda Hotel, Masab Tank, Hyderabad  3 km</p>
+                        <p class="card-text">₹2500 for two</p>
+                        <div class="mb-2">
+                            <span class="btn btn-outline-secondary btn-sm">Flat 20% off on pre-booking</span> <span class="btn btn-outline-secondary btn-sm">+4 more</span>
+                        </div>
+                        <div class="mb-2">
+                            <span class="btn btn-outline-secondary btn-sm">Up to 10% off with bank offers</span>
+                        </div>
+                        <p class="card-text"><small class="text-muted">Get extra ₹100 off using PHONEPEUPI</small></p>
+                        <button class="btn btn-outline-secondary btn-sm">Table booking</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card restaurant-card">
+                    <img src="https://dineout-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/v1659622637/ytzokpqrlsze5gfb1sea.jpg" class="card-img-top restaurant-image" alt="Rasa by Ashoka">
+                    <div class="card-body restaurant-info">
+                        <h5 class="card-title">Rasa by Ashoka <span class="rating">⭐ 4.4</span></h5>
+                        <p class="card-text">North Indian • Mughlai<br>Best Western Ashoka Hotel, Lakdi-Ka-Pul...  4.2 km</p>
+                        <p class="card-text">₹2600 for two</p>
+                        <div class="mb-2">
+                            <span class="btn btn-outline-secondary btn-sm">Flat 20% off on walk-in</span> <span class="btn btn-outline-secondary btn-sm">+1 more</span>
+                        </div>
+                        <div class="mb-2">
+                            <span class="btn btn-outline-secondary btn-sm">Up to 10% off with bank offers</span>
+                        </div>
+                        <p class="card-text"><small class="text-muted">Get extra ₹444 off using SWIGGYGENIE</small></p>
+                        <button class="btn btn-outline-secondary btn-sm">Table booking</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	 <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/m/seo/App_download_banner.png" alt="QR Code" class="img-fluid" style="max-width:100%;">
+
+    
+
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .city-button {
+            width: 200px; /* Adjust width as needed */
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+    <div class="container mt-5">
+        <h2>Cities with food delivery</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <button class="btn btn-outline-primary btn-block city-button">Order food online in Bangalore</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-outline-primary btn-block city-button">Order food online in Gurgaon</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-outline-primary btn-block city-button">Order food online in Hyderabad</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-outline-primary btn-block city-button">Order food online in Delhi</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-outline-primary btn-block city-button">Order food online in Mumbai</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-outline-primary btn-block city-button">Order food online in Pune</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-outline-primary btn-block city-button">Order food online in Kolkata</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-outline-primary btn-block city-button">Order food online in Chennai</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-outline-primary btn-block city-button">Order food online in Ahmedabad</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-outline-primary btn-block city-button">Order food online in Chandigarh</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-outline-primary btn-block city-button">Order food online in Jaipur</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-outline-success btn-block city-button">Show more </button>
+            </div>
+        </div>
+
+        <h2 class="mt-4">Cities with grocery delivery</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <button class="btn btn-outline-success btn-block city-button">Order grocery delivery in Bangalore</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-outline-success btn-block city-button">Order grocery delivery in Gurgaon</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-outline-success btn-block city-button">Order grocery delivery in Hyderabad</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-outline-success btn-block city-button">Order grocery delivery in Delhi</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-outline-success btn-block city-button">Order grocery delivery in Mumbai</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-outline-success btn-block city-button">Order grocery delivery in Pune</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-outline-success btn-block city-button">Order grocery delivery in Kolkata</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-outline-success btn-block city-button">Order grocery delivery in Chennai</button>
+            </div>
+			<div class="col-md-3">
+                <button class="btn btn-outline-success btn-block city-button">Order grocery delivery in Ahmedabad</button>
+            </div>
+			<div class="col-md-3">
+                <button class="btn btn-outline-success btn-block city-button">Order grocery delivery in Chandigarh</button>
+            </div>
+			<div class="col-md-3">
+                <button class="btn btn-outline-success btn-block city-button">Order grocery delivery in Jaipur</button>
+            </div>
+			<div class="col-md-3">
+                <button class="btn btn-outline-success btn-block city-button">Show more </button>
+            </div>
+        </div>
+    </div>
+	<br>
+	<br>
+
+    
+    <style>
+        /* Custom styles for better alignment and spacing */
+        .footer-section {
+            margin-bottom: 15px;
+        }
+        .social-links a {
+            margin-right: 10px;
+            color: #000; /* Adjust color as needed */
+        }
+        .social-links a:hover {
+            color: #fc8019; /* Swiggy's primary color */
+        }
+        .available-cities select {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <footer class="bg-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 footer-section">
+                    <img src="https://media-assets.swiggy.com/portal/testing/seo-home/Group.svg" alt="Swiggy" height="30">
+                    <p class="mt-2">&copy; 2025 Swiggy Limited</p>
+                </div>
+                <div class="col-md-3 footer-section">
+                    <h5>Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Swiggy Corporate</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Swiggy One</a></li>
+                        <li><a href="#">Swiggy Instamart</a></li>
+                        <li><a href="#">Swiggy Dineout</a></li>
+                        <li><a href="#">Swiggy Genie</a></li>
+                        <li><a href="#">Minis</a></li>
+                        <li><a href="#">Ping</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-section">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Help & Support</a></li>
+                        <li><a href="#">Partner With Us</a></li>
+                        <li><a href="#">Ride With Us</a></li>
+                    </ul>
+                    <h5 class="mt-3">Legal</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-section">
+                    <h5>Available In:</h5>
+                    <div class="available-cities">
+                        <select class="form-control">
+                            <option>Bangalore</option>
+                            <option>Gurgaon</option>
+                            <option>Hyderabad</option>
+                            <option>Delhi</option>
+                            <option>Mumbai</option>
+                            <option>Pune</option>
+                            <option>665 cities</option>
+                        </select>
+                    </div>
+                    <h5 class="mt-3">Life at Swiggy</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Explore With Swiggy</a></li>
+                        <li><a href="#">Swiggy News</a></li>
+                        <li><a href="#">Snackables</a></li>
+                    </ul>
+                    <h5 class="mt-3">Social Links</h5>
+                    <div class="social-links">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-linkedin">
+						
+ <img src="https://cdn-icons-png.flaticon.com/128/733/733547.png"width="27px" style=" padding-top:0px; ">
+ <img src="https://cdn-icons-png.flaticon.com/128/4494/4494477.png" width="27px" style="padding-top:0px;
+ margin:0 2px;">
+ <img src="https://cdn-icons-png.flaticon.com/128/4494/4494485.png" width="27px" style="padding-top:0px;
+ margin:0 2px;">
+<img src="https://cdn-icons-png.flaticon.com/128/2111/2111463.png" width="27px" style="padding-top:0px;
+ margin:0 2px;">
+<img src="https://cdn-icons-png.flaticon.com/128/145/145808.png"width="27px" style="padding-top:0px;
+ margin:0 2px;">
+ </div>
+</div>			
+            
+ <div class="container">
+ <div class="row">
+ <div class="col-sm-6 text-right">
+ For better experience, download the Swiggy app now
+ </div>
+ <div class="col-sm-3">
+ <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200,h_65/icon-AppStore_lg30tv">
+ </div>
+ <div class="col-sm-3">
+ <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200,h_65/icon-GooglePlay_1_zixjxl">
+ </div>
+ </div>
+ </div>
+ 
+ 
+
+ 
+
+ 
+	   
+    
+    
+
+    
+            
+            <script src="https://kit.fontawesome.com/a076d05399.js"></script> <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>    
+                
+				
+				
+				
